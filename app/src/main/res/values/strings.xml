@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Group SMS</string>
+
+    <string name="action_settings">Settings</string>
+    <string-array name="image_ids">
+        <item>@drawable/people</item>
+        <item>@drawable/registration</item>
+        <item>@drawable/sms</item>
+        <item>@drawable/email</item>
+        <item>@drawable/people_chating</item>
+        <item>@drawable/update</item>
+    </string-array>
+
+    <string-array name="image_name">
+        <item>Add Groups</item>
+        <item>Registration</item>
+        <item>Send SMS</item>
+        <item>Send Email</item>
+        <item>Registered People</item>
+        <item>Update List</item>
+    </string-array>
+</resources>
