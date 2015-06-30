@@ -12,11 +12,19 @@
     </string-array>
 
     <string-array name="image_name">
-        <item>Add Groups</item>
+        <item>Add a Group</item>
         <item>Registration</item>
         <item>Send SMS</item>
         <item>Send Email</item>
         <item>Registered People</item>
         <item>Update List</item>
     </string-array>
+
+    <string name="edit_message">Group Name</string>
+    <string name="edit_message_txt">Name of Group :</string>
+    <string name="txt_describe_grp">Describe Group :</string>
+    <string name="edit_description">Group Description</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_clear">Clear</string>
+    <string name="btn_exit">Exit</string>
 </resources>

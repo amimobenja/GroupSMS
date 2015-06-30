@@ -1,10 +1,11 @@
 package com.amimobenja.www.gtext;
 
+
 import android.content.Intent;
-import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -25,10 +26,13 @@ public class GTextMainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gtext_main);
 
+        ActionBar actionBar = getSupportActionBar();
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.drawable.messages_icon_3);
+
+
         gridView = (GridView) findViewById(R.id.gridView);
-
-
-
         gridAdapter = new GridViewAdapter(this, R.layout.grid_item_layout, getData());
         gridView.setAdapter(gridAdapter);
 

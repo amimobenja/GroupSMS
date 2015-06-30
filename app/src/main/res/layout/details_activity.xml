@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#000">
+    android:background="@color/whitish">
 
     <ImageView
         android:id="@+id/image"
@@ -17,8 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="#00000c"
+        android:background="@color/whitish"
         android:padding="10dp"
-        android:textColor="#fff"
+        android:textColor="@color/black"
         android:textSize="20dp" />
 </FrameLayout>
