@@ -26,5 +26,27 @@
     <string name="edit_description">Group Description</string>
     <string name="btn_save">Save</string>
     <string name="btn_clear">Clear</string>
-    <string name="btn_exit">Exit</string>
+    <string name="spinner_prompt">Select Group</string>
+    <string name="edit_Select_Grp">Select Group Below :</string>
+    <string name="compose_hint">Write Text</string>
+    <string name="compose_greetings">Greetings</string>
+    <string name="btn_send">Send</string>
+    <string name="edt_FirstName">First Name</string>
+    <string name="edt_SecondName">Second Name</string>
+    <string name="edt_NickName">Nick Name</string>
+    <string name="edt_noNameFields">No fields</string>
+    <string name="edt_PhoneNumber">Phone Number</string>
+    <string name="btn_view">View</string>
+    <string name="btn_edit">Update</string>
+    <string name="btn_search">Search</string>
+    <string name="btn_delete">Delete</string>
+    <string name="selectGroup_txt">Select Group below: </string>
+
+    <string-array name="name_array">
+        <item>@string/edt_NickName</item>
+        <item>@string/edt_FirstName</item>
+        <item>@string/edt_SecondName</item>
+        <item>@string/edt_noNameFields</item>
+
+    </string-array>
 </resources>

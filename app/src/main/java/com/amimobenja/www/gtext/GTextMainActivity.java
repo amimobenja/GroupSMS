@@ -1,6 +1,9 @@
 package com.amimobenja.www.gtext;
 
 
+
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -51,16 +54,14 @@ public class GTextMainActivity extends ActionBarActivity {
                     //Start details activity
                     startActivity(intent);
                 } else if (item.getTitle().equals(imgs_name.getString(1))) {
-                    Intent intent = new Intent(GTextMainActivity.this, DetailsActivity.class);
+                    Intent intent = new Intent(GTextMainActivity.this, RegistrationActivity.class);
                     intent.putExtra("title", item.getTitle());
-                    intent.putExtra("image", item.getImage());
                     //Start details activity
                     startActivity(intent);
 
                 } else if (item.getTitle().equals(imgs_name.getString(2))) {
-                    Intent intent = new Intent(GTextMainActivity.this, DetailsActivity.class);
+                    Intent intent = new Intent(GTextMainActivity.this, SendTxtActivity.class);
                     intent.putExtra("title", item.getTitle());
-                    intent.putExtra("image", item.getImage());
                     //Start details activity
                     startActivity(intent);
 
@@ -141,4 +142,6 @@ public class GTextMainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }

@@ -1,13 +1,12 @@
 package com.amimobenja.www.gtext;
 
-import android.graphics.Bitmap;
+
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,7 +16,7 @@ import java.sql.SQLException;
  * Created by User on 20 May 2015.
  */
 public class AddGroupActivity extends ActionBarActivity {
-    private Button btnSave;
+    private Button btnSave, btnClear;
     private EditText edtGroupName, edtGroupDescription;
     private TextView txtGroupName, txtGroupDescript;
 
@@ -27,9 +26,11 @@ public class AddGroupActivity extends ActionBarActivity {
         setContentView(R.layout.add_groups_activity);
 
         ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setIcon(R.drawable.messages_icon_3);
 
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.drawable.messages_icon_3);
+        actionBar.getDisplayOptions();
+
 
         String title = getIntent().getStringExtra("title");
         TextView titleTextView = (TextView) findViewById(R.id.txt_Title);
@@ -50,7 +51,7 @@ public class AddGroupActivity extends ActionBarActivity {
                 try {
                     db.open();
                     if (edtGroupName.getText().toString().equals("Group Name") || edtGroupDescription.getText().toString().equals("")) {
-                        DisplayToast("Ensure that both the "+txtGroupName.getText()+" and "+txtGroupDescript.getText()+" are filled.");
+                        DisplayToast("Empty fields noted.");
 
                     } else {
                         long id = db.insertContact(edtGroupName.getText().toString().trim(),
@@ -65,17 +66,23 @@ public class AddGroupActivity extends ActionBarActivity {
                     e.printStackTrace();
                 }
 
-
-
             }
         });
 
-
-
-
+        btnClear = (Button) findViewById(R.id.btn_clear);
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                edtGroupName.setText("");
+                edtGroupDescription.setText("");
+                DisplayToast("Fields cleared.");
+            }
+        });
     }
+
 
     private void DisplayToast(String msg) {
         Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
     }
+
 }

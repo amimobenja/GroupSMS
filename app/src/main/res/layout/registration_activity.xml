@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".GTextMainActivity"
+    android:background="@color/whitish">
+
+    <LinearLayout android:id="@+id/id_ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_RegistrationTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:padding="7dp"
+            android:textColor="#fff"
+            android:background="@color/black"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/txt_SelectGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:textColor="@color/black"
+            android:paddingTop="15dp"
+            android:text="@string/selectGroup_txt"/>
+
+        <Spinner
+            android:id="@+id/spinnerGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:textSize="10dp"
+            android:popupBackground="@color/whitish"/>
+
+        <AutoCompleteTextView android:id="@+id/edtPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="13dp"
+            android:paddingTop="15dp"
+            android:hint ="@string/edt_PhoneNumber"
+            android:scrollHorizontally="false"
+            android:inputType="number"
+            android:gravity="top"/>
+
+        <EditText android:id="@+id/edtFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="13dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:hint ="@string/edt_FirstName"
+            android:scrollHorizontally="false"
+            android:gravity="top"/>
+
+
+        <EditText android:id="@+id/edtSecondName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="13dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:hint ="@string/edt_SecondName"
+            android:scrollHorizontally="false"
+            android:gravity="top"/>
+
+        <EditText android:id="@+id/edtNickName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="13dp"
+            android:inputType="textCapSentences|textMultiLine"
+            android:hint ="@string/edt_NickName"
+            android:scrollHorizontally="false"
+            android:gravity="top"/>
+
+        <LinearLayout android:id="@+id/fourthLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="16dp">
+
+            <Button android:id="@+id/btn_RegSave"
+                android:hint="@string/btn_save"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <Button android:id="@+id/btn_RegView"
+                android:hint="@string/btn_view"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <Button android:id="@+id/btn_RegSearch"
+                android:hint="@string/btn_search"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    <LinearLayout android:id="@+id/fivethLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button android:id="@+id/btn_RegEdit"
+            android:hint="@string/btn_edit"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <Button android:id="@+id/btn_RegDelete"
+            android:hint="@string/btn_delete"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+
+        <Button android:id="@+id/btn_RegClear"
+            android:hint="@string/btn_clear"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    </LinearLayout>>
+
+</RelativeLayout>
