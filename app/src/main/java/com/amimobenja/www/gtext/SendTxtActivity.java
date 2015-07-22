@@ -139,7 +139,7 @@ public class SendTxtActivity extends ActionBarActivity {
                             DisplayToast("No records found.");
                         }
 
-                        DisplayToast(a+" - SMS sent.");
+                        DisplayToast(a+" - SMS Created.");
 
                         dbTwo.close();
                     } catch (SQLException e) {
