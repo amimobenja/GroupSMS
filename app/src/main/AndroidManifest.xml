@@ -28,6 +28,7 @@
         <activity android:name=".AddGroupActivity"/>
         <activity android:name=".SendTxtActivity"/>
         <activity android:name=".RegistrationActivity"/>
+        <activity android:name=".RegisteredPeopleActivity"/>
     </application>
 
 </manifest>

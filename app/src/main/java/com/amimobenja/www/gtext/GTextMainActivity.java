@@ -73,11 +73,11 @@ public class GTextMainActivity extends ActionBarActivity {
                     startActivity(intent);
 
                 } else if (item.getTitle().equals(imgs_name.getString(4))) {
-                    Intent intent = new Intent(GTextMainActivity.this, DetailsActivity.class);
+                    Intent intent = new Intent(GTextMainActivity.this, RegisteredPeopleActivity.class);
                     intent.putExtra("title", item.getTitle());
-                    intent.putExtra("image", item.getImage());
                     //Start details activity
                     startActivity(intent);
+
 
                 } else if (item.getTitle().equals(imgs_name.getString(5))) {
                     Intent intent = new Intent(GTextMainActivity.this, DetailsActivity.class);

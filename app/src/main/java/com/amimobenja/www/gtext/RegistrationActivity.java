@@ -95,9 +95,9 @@ public class RegistrationActivity extends ActionBarActivity {
                         } else {
 
                             long idTwo = dbTwo.insertContact(edtPNumber.getText().toString().trim(),
-                                    edtFName.getText().toString().trim(),
-                                    edtSName.getText().toString().trim(),
-                                    edtNName.getText().toString().trim(),
+                                    capitalize(edtFName.getText().toString().trim()),
+                                    capitalize(edtSName.getText().toString().trim()),
+                                    capitalize(edtNName.getText().toString().trim()),
                                     spinnerGrp.getSelectedItem().toString());
                             DisplayToast("RC"+idTwo+":- "+edtPNumber.getText().toString()+" is Saved!");
                             clear();
@@ -198,8 +198,8 @@ public class RegistrationActivity extends ActionBarActivity {
                         DisplayToast("Empty Values Noted!");
 
                     } else {
-                        if (dbTwo.updateContact(edtPNumber.getText().toString().trim(), edtFName.getText().toString().trim(),
-                                edtSName.getText().toString().trim(), edtNName.getText().toString().trim(),
+                        if (dbTwo.updateContact(edtPNumber.getText().toString().trim(), capitalize(edtFName.getText().toString().trim()),
+                                capitalize(edtSName.getText().toString().trim()), capitalize(edtNName.getText().toString().trim()),
                                 spinnerGrp.getSelectedItem().toString())) {
                             DisplayToast("Record - "+edtPNumber.getText().toString().trim()+" Updated Successfully.");
                             clear();
@@ -250,6 +250,11 @@ public class RegistrationActivity extends ActionBarActivity {
         edtFName.setText("");
         edtSName.setText("");
         edtNName.setText("");
+    }
+
+    private String capitalize(String line) {
+        line = line.toLowerCase();
+        return Character.toUpperCase(line.charAt(0)) + line.substring(1);
     }
 
     /**

@@ -94,9 +94,8 @@ public class SendTxtActivity extends ActionBarActivity {
                         System.out.println("Spinner 1 - "+spinner.getSelectedItem().toString());
                         Cursor c = dbTwo.getAllRegPeople(spinner.getSelectedItem().toString());
 
+                        dialogShow(context, Integer.valueOf(c.getCount()+"000"));
                         if (c.moveToFirst()) {
-                            dialogShow(context, Integer.valueOf(c.getCount()+"000"));
-
 
                             do {
                                 Cursor d = dbTwo.getPerson(c.getString(0), spinner.getSelectedItem().toString());

@@ -61,7 +61,7 @@ public class SMSListener extends BroadcastReceiver {
                         ArrayList<String> grp = db.myLabels();
                         String group = "NULL";
                         for (int i = 0; i < grp.size(); i++) {
-                            if (i == intGrp) {
+                            if (i == intGrp-1) {
                                 System.out.println("GROUP - "+grp.get(i));
                                 group = grp.get(i);
                             }
@@ -79,15 +79,15 @@ public class SMSListener extends BroadcastReceiver {
 
                                 System.out.println("Message - FN: "+fName+" SN: "+sName+" NN: "+nName+" GN: "+group);
                                 long idTwo = abc.insertContact(sent_from,
-                                        fName.trim(),
-                                        sName.trim(),
-                                        nName.trim(),
+                                        capitalize(fName.trim()),
+                                        capitalize(sName.trim()),
+                                        capitalize(nName.trim()),
                                         group.trim());
                                 System.out.println("Message - SUCCESS");
-                                sendSMS(sent_from, "WELCOME "+fName.trim()+". \nRecord: "+sent_from+" is Registered Successfully.\n" +
-                                        "FIRST NAME - "+fName.trim()+"\n" +
-                                        "SECOND NAME - "+sName.trim()+"\n" +
-                                        "NICK NAME - "+nName.trim()+"\n" +
+                                sendSMS(sent_from, "WELCOME "+capitalize(fName.trim())+". \nRecord: "+sent_from+" is Registered Successfully.\n" +
+                                        "FIRST NAME - "+capitalize(fName.trim())+"\n" +
+                                        "SECOND NAME - "+capitalize(sName.trim())+"\n" +
+                                        "NICK NAME - "+capitalize(nName.trim())+"\n" +
                                         "GROUP ASSIGNED - "+group.trim()+".\n");
 
                             }
@@ -112,6 +112,11 @@ public class SMSListener extends BroadcastReceiver {
     private void sendSMS(String phoneNumber, String message) {
         SmsManager sms = SmsManager.getDefault();
         sms.sendTextMessage(phoneNumber, null, message, null, null);
+    }
+
+    private String capitalize(String line) {
+        line = line.toLowerCase();
+        return Character.toUpperCase(line.charAt(0)) + line.substring(1);
     }
 
 
