@@ -1,0 +1,11 @@
+GroupSMS
+
+It's an android application that enables you to send personalized text messages to a group of people.
+
+You can register individuals manually using the registration portal on the screen or individuals wishing to register can do so by sending you short code such as;
+
+REG: Their_First_Name Their_Second_Name Their_Nick_Name Group_Number
+
+The Group_Number is an integer of the groups as they appear on the Group drop down menu.
+
+Try it out to understand it's excellence...

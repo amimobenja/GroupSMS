@@ -47,7 +47,7 @@ public class SMSListener extends BroadcastReceiver {
                     String foo = msgBody.substring(0, Math.min(4, msgBody.length()));
                     System.out.println("Message FOO - "+foo);
                     System.out.println("From - "+sent_from);
-                    if (foo.equals("REG:")) {
+                    if (foo.equalsIgnoreCase("REG:")) {
                         System.out.println("Message - "+msgBody);
                         //store into DB.
 
@@ -84,11 +84,11 @@ public class SMSListener extends BroadcastReceiver {
                                         capitalize(nName.trim()),
                                         group.trim());
                                 System.out.println("Message - SUCCESS");
-                                sendSMS(sent_from, "WELCOME "+capitalize(fName.trim())+". \nRecord: "+sent_from+" is Registered Successfully.\n" +
+                                sendSMS(sent_from, "WELCOME "+capitalize(fName.trim())+".\n\nRecord: "+sent_from+" is Registered Successfully.\n" +
                                         "FIRST NAME - "+capitalize(fName.trim())+"\n" +
                                         "SECOND NAME - "+capitalize(sName.trim())+"\n" +
                                         "NICK NAME - "+capitalize(nName.trim())+"\n" +
-                                        "GROUP ASSIGNED - "+group.trim()+".\n");
+                                        "GROUP ASSIGNED - "+group.trim());
 
                             }
                             abc.close();
